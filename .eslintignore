@@ -1,0 +1,4 @@
+**/dist/**
+*.svg
+serviceWorker.ts
+*.css
