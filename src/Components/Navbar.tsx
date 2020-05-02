@@ -1,12 +1,13 @@
 import React, { ReactElement } from 'react';
+import dfrLogo from './../Images/dfr-logo-xs.png';
 
-class Navbar extends React.Component {
+export class Navbar extends React.Component {
   public render(): ReactElement {
     return (
       <nav className="navbar navbar-expand-lg fixed-top navbar-custom sticky sticky-dark">
         <div className="container">
-          <a className="navbar-brand logo text-uppercase" href="/home-one">
-            Dorsin
+          <a className="navbar-brand logo text-uppercase" href="/">
+            <img src={dfrLogo} alt="Downforce Racing logo" />
           </a>
           <button
             className="navbar-toggler"
@@ -28,7 +29,7 @@ class Navbar extends React.Component {
               </li>
               <li className="nav-item">
                 <a href="#services" className="nav-link">
-                  Services
+                  Videos
                 </a>
               </li>
               <li className="nav-item">
@@ -37,23 +38,8 @@ class Navbar extends React.Component {
                 </a>
               </li>
               <li className="nav-item">
-                <a href="#pricing" className="nav-link">
-                  Pricing
-                </a>
-              </li>
-              <li className="nav-item">
                 <a href="#team" className="nav-link">
                   Team
-                </a>
-              </li>
-              <li className="nav-item">
-                <a href="#blog" className="nav-link">
-                  Blog
-                </a>
-              </li>
-              <li className="nav-item">
-                <a href="#contact" className="nav-link">
-                  Contact
                 </a>
               </li>
             </ul>
@@ -61,7 +47,7 @@ class Navbar extends React.Component {
               <ul className="nav navbar-nav navbar-right">
                 <li>
                   <button type="button" className="btn btn-custom navbar-btn btn-rounded waves-effect waves-light">
-                    Try it Free
+                    Live stream
                   </button>
                 </li>
               </ul>
@@ -72,5 +58,3 @@ class Navbar extends React.Component {
     );
   }
 }
-
-export default Navbar;

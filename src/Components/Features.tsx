@@ -1,8 +1,7 @@
 import React, { ReactElement } from 'react';
 import { Link } from 'react-router-dom';
-import ThreeDRotation from '@material-ui/icons/';
 
-class Features extends React.Component {
+export class Features extends React.Component {
   public render(): ReactElement {
     return (
       <section className="section bg-light" id="features">
@@ -37,5 +36,3 @@ class Features extends React.Component {
     );
   }
 }
-
-export default Features;

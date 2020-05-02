@@ -1,56 +1,23 @@
 import React, { ReactElement } from 'react';
 import { Link } from 'react-router-dom';
+import FacebookIcon from '@material-ui/icons/Facebook';
+import InstagramIcon from '@material-ui/icons/Instagram';
 
-class SocialMedia extends React.Component {
+export class SocialMedia extends React.Component {
   public render(): ReactElement {
     return (
-      <section className="cta bg-light">
-        <div className="container">
-          <div className="row">
-            <div className="col-lg-6">
-              <ul className="list-inline social margin-t-20">
-                <li className="list-inline-item">
-                  <Link to="" className="social-icon">
-                    <i className="mdi mdi-facebook" />
-                  </Link>
-                </li>
-                <li className="list-inline-item">
-                  <Link to="" className="social-icon">
-                    <i className="mdi mdi-twitter" />
-                  </Link>
-                </li>
-                <li className="list-inline-item">
-                  <Link to="" className="social-icon">
-                    <i className="mdi mdi-linkedin" />
-                  </Link>
-                </li>
-                <li className="list-inline-item">
-                  <Link to="" className="social-icon">
-                    <i className="mdi mdi-google-plus" />
-                  </Link>
-                </li>
-                <li className="list-inline-item">
-                  <Link to="" className="social-icon">
-                    <i className="mdi mdi-dribbble" />
-                  </Link>
-                </li>
-              </ul>
-            </div>
-            <div className="col-lg-3 margin-t-30">
-              <p className="margin-b-0 contact-title">
-                <i className="pe-7s-call" /> +91 123 4556 789
-              </p>
-            </div>
-            <div className="col-lg-3 margin-t-30 text-right">
-              <p className="contact-title">
-                <i className="pe-7s-mail-open" /> Support@info.com
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
+      <ul className="list-inline social margin-t-20">
+        <li className="list-inline-item">
+          <Link to="https://www.facebook.com/downforceracingteam/" target="_blank" className="social-icon">
+            <FacebookIcon />
+          </Link>
+        </li>
+        <li className="list-inline-item">
+          <Link to="https://www.instagram.com/downforceracingco/" target="_blank" className="social-icon">
+            <InstagramIcon />
+          </Link>
+        </li>
+      </ul>
     );
   }
 }
-
-export default SocialMedia;

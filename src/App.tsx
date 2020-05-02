@@ -1,13 +1,11 @@
 import React, { ReactElement } from 'react';
-import HomeFive from './Pages/Home';
 import { BrowserRouter } from 'react-router-dom';
+import { HomePage } from './Pages/Home';
 
-function App(): ReactElement {
+export function App(): ReactElement {
   return (
     <BrowserRouter>
-      <HomeFive />
+      <HomePage />
     </BrowserRouter>
   );
 }
-
-export default App;
