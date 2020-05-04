@@ -323,7 +323,7 @@ iframe {
   ======================*/
 
 .navbar-custom {
-    padding: 20px 0px;
+    padding: 10px 0px;
     width: 100%;
     border-radius: 0px;
     z-index: 999;
@@ -332,6 +332,7 @@ iframe {
     -moz-transition: all 0.5s ease-in-out;
     -o-transition: all 0.5s ease-in-out;
     transition: all 0.5s ease-in-out;
+    background-color: #272a33 !important;
 }
 
 .sticky-wrapper {
@@ -1104,8 +1105,6 @@ textarea.form-control {
 
     .navbar-custom {
         margin-top: 0px;
-        padding: 10px 0px !important;
-        background-color: #272a33 !important;
         box-shadow: 0 10px 33px rgba(0, 0, 0, .1);
         color: #fff !important;
     }

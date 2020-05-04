@@ -1,5 +1,5 @@
 import React, { ReactElement } from 'react';
-import dfrLogo from './../Images/dfr-logo-xs.png';
+import dfrLogo from '../../Images/dfr-logo-xs.png';
 
 export class Navbar extends React.Component {
   public render(): ReactElement {

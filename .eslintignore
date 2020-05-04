@@ -2,3 +2,5 @@
 *.svg
 serviceWorker.ts
 *.css
+*.png
+*.jpg
