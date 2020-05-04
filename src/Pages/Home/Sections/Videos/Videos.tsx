@@ -36,18 +36,20 @@ export class Videos extends React.Component<VideosProps, VideosState> {
   public render(): ReactElement {
     const { videos = [] } = this.state;
     const videoList = videos.map((video: YoutubeResponseItem) => {
+      const { id: { videoId } } = video;
+
       return (
-        <div key={video.id.videoId} className="col-lg-4">
+        <div key={videoId} className="col-lg-4">
           <div className="features-box">
             <YouTube
-              videoId={video.id.videoId}
+              videoId={videoId}
               opts={{
                 playerVars: {
                   autoplay: 0,
                   controls: 2,
                   showinfo: 0,
+                  modestbranding: 1,
                 },
-                // width: '350px',
                 height: '200px',
               }}
               className="youtube-grid"
@@ -56,10 +58,16 @@ export class Videos extends React.Component<VideosProps, VideosState> {
         </div>
       );
     });
+
     if (videoList.length > 0) {
       return (
-        <section className="section bg-light" id="videos">
+        <section className="section pt-4 bg-secondary" id="videos">
           <div className="container">
+            <div className="row">
+              <div className="col-lg-8 offset-lg-2">
+                <h1 className="section-title text-center text-white">Previous live streams</h1>
+              </div>
+            </div>
             <div className="row">{videoList}</div>
           </div>
         </section>

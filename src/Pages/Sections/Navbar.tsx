@@ -46,8 +46,8 @@ export class Navbar extends React.Component {
             <div className="nav-button ml-auto">
               <ul className="nav navbar-nav navbar-right">
                 <li>
-                  <button type="button" className="btn btn-custom navbar-btn btn-rounded waves-effect waves-light">
-                    Live stream
+                  <button type="button" className="btn btn-danger navbar-btn waves-effect waves-light">
+                    Watch live now
                   </button>
                 </li>
               </ul>

@@ -54,8 +54,6 @@ export class YouTubeDao {
       query: 'live',
     });
 
-    console.log('--------------', response);
-
     return response;
   }
 
@@ -71,7 +69,7 @@ export class YouTubeDao {
     }
 
     const errorMessage = `Failed to get any videos from YouTube`;
-    console.log(errorMessage, youtubeResponse);
+    console.error(errorMessage, youtubeResponse);
     throw new Error(errorMessage);
   }
 

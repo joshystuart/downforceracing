@@ -3,6 +3,9 @@ import joshProfileImage from './dfr-josh.jpg';
 import nickProfileImage from './dfr-nick.jpg';
 import mickProfileImage from './dfr-mick.jpg';
 import robProfileImage from './dfr-rob.jpg';
+import tedProfileImage from './dfr-ted.jpg';
+import edProfileImage from './dfr-ed.jpg';
+import malbsProfileImage from './dfr-malbs.jpg';
 import { TeamProfile, TeamProfileProps } from './TeamProfile';
 
 const teamMembers: TeamProfileProps[] = [
@@ -25,6 +28,21 @@ const teamMembers: TeamProfileProps[] = [
     profileImage: mickProfileImage,
     name: 'Mick',
     series: 'F3',
+  },
+  {
+    profileImage: edProfileImage,
+    name: 'Ed',
+    series: 'Formula Renault 3.5',
+  },
+  {
+    profileImage: malbsProfileImage,
+    name: 'Malbs',
+    series: 'F3',
+  },
+  {
+    profileImage: tedProfileImage,
+    name: 'Ted',
+    series: 'Formula Renault 3.5',
   },
 ];
 
