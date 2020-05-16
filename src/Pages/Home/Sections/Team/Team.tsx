@@ -7,7 +7,7 @@ import robProfileImage from './dfr-rob.jpg';
 import tedProfileImage from './dfr-ted.jpg';
 import edProfileImage from './dfr-ed.jpg';
 import malbsProfileImage from './dfr-malbs.jpg';
-import brettProfileImage from './dfr-brett.jpg';
+import brentProfileImage from './dfr-brent.jpg';
 import nickmProfileImage from './dfr-nickm.jpg';
 import jayProfileImage from './dfr-jay.jpg';
 import { TeamProfile, TeamProfileProps } from './TeamProfile';
@@ -15,57 +15,57 @@ import { TeamProfile, TeamProfileProps } from './TeamProfile';
 const teamMembers: TeamProfileProps[] = [
   {
     profileImage: joshProfileImage,
-    name: 'Joshy',
+    name: 'Joshy Stuart',
     series: 'Formula Renault 3.5',
   },
   {
     profileImage: nickProfileImage,
-    name: 'Nick',
+    name: 'Nick Bradford',
     series: 'Formula Renault 3.5',
   },
   {
     profileImage: robProfileImage,
-    name: 'Rob',
+    name: 'Rob Crouch',
     series: 'Formula Renault 3.5',
   },
   {
     profileImage: russProfileImage,
-    name: 'Russ',
+    name: 'Shane Russel',
     series: 'Formula Renault 3.5',
   },
   {
     profileImage: edProfileImage,
-    name: 'Ed',
+    name: 'Edward Samborski',
     series: 'Formula Renault 3.5',
   },
   {
     profileImage: mickProfileImage,
-    name: 'Mick',
+    name: 'Michael Carew',
     series: 'F3',
   },
   {
     profileImage: tedProfileImage,
-    name: 'Ted',
+    name: 'Theodore Burns',
     series: 'Formula Renault 3.5',
   },
   {
     profileImage: malbsProfileImage,
-    name: 'Malbs',
+    name: 'Sean P Malloy',
     series: 'F3',
   },
   {
     profileImage: jayProfileImage,
-    name: 'Jay',
+    name: 'Jay Dixon',
     series: 'F3',
   },
   {
     profileImage: nickmProfileImage,
-    name: 'Nick',
+    name: 'Nick Milani',
     series: 'F3',
   },
   {
-    profileImage: brettProfileImage,
-    name: 'Brett',
+    profileImage: brentProfileImage,
+    name: 'Brent Mekis',
     series: 'F3',
   },
 ];
