@@ -1,5 +1,6 @@
 import React, { ReactElement } from 'react';
 import dfrLogo from '../../Images/dfr-logo-xs.png';
+import { config } from '../../Config/config';
 
 export class Navbar extends React.Component {
   public render(): ReactElement {
@@ -28,13 +29,8 @@ export class Navbar extends React.Component {
                 </a>
               </li>
               <li className="nav-item">
-                <a href="#services" className="nav-link">
+                <a href="#videos" className="nav-link">
                   Videos
-                </a>
-              </li>
-              <li className="nav-item">
-                <a href="#features" className="nav-link">
-                  Features
                 </a>
               </li>
               <li className="nav-item">
@@ -46,7 +42,11 @@ export class Navbar extends React.Component {
             <div className="nav-button ml-auto">
               <ul className="nav navbar-nav navbar-right">
                 <li>
-                  <button type="button" className="btn btn-danger navbar-btn waves-effect waves-light">
+                  <button
+                    type="button"
+                    onClick={this.handleWatchNow}
+                    className="btn btn-danger navbar-btn waves-effect waves-light"
+                  >
                     Watch live now
                   </button>
                 </li>
@@ -56,5 +56,12 @@ export class Navbar extends React.Component {
         </div>
       </nav>
     );
+  }
+
+  private handleWatchNow(): void {
+    const win = window.open(config.youtube.channelUrl, '_blank');
+    if (win) {
+      win.focus();
+    }
   }
 }

@@ -23,7 +23,6 @@ const imageStylesHover = {
 };
 
 export class TeamProfile extends React.Component<TeamProfileProps, TeamProfileState> {
-
   constructor(props: Readonly<TeamProfileProps>) {
     super(props);
     this.state = {
@@ -40,11 +39,11 @@ export class TeamProfile extends React.Component<TeamProfileProps, TeamProfileSt
           <div className="team-wrapper">
             <div className="team-member">
               <img
-                onMouseEnter={() => this.setState({ hover: true })}
-                onMouseLeave={() => this.setState({ hover: false })}
+                onMouseEnter={(): void => this.setState({ hover: true })}
+                onMouseLeave={(): void => this.setState({ hover: false })}
                 alt={name}
                 src={profileImage}
-                className="img-fluid rounded-circle"
+                className="img-fluid"
                 style={this.state.hover ? imageStylesHover : imageStyles}
               />
             </div>

@@ -42,8 +42,8 @@ export class YouTubeDao {
     });
   }
 
-  public async getLiveStream(): Promise<YoutubeResponseItem[]> {
-    const response = await this.getVideos({
+  public async getBroadcastLiveStream(): Promise<YoutubeResponseItem[]> {
+    return await this.getVideos({
       endpoint: SEARCH,
       filters: {
         eventType: 'completed',
@@ -53,8 +53,19 @@ export class YouTubeDao {
       },
       query: 'live',
     });
+  }
 
-    return response;
+  public async getLiveStream(): Promise<YoutubeResponseItem[]> {
+    return await this.getVideos({
+      endpoint: SEARCH,
+      filters: {
+        eventType: 'completed',
+        channelId: CHANNEL_ID,
+        maxResults: 1,
+        order: 'date',
+      },
+      query: 'live',
+    });
   }
 
   private async getVideos(options: YouTubeOptions): Promise<YoutubeResponseItem[]> {

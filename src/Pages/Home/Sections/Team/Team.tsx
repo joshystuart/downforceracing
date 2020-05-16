@@ -2,10 +2,14 @@ import React, { ReactElement } from 'react';
 import joshProfileImage from './dfr-josh.jpg';
 import nickProfileImage from './dfr-nick.jpg';
 import mickProfileImage from './dfr-mick.jpg';
+import russProfileImage from './dfr-russ.jpg';
 import robProfileImage from './dfr-rob.jpg';
 import tedProfileImage from './dfr-ted.jpg';
 import edProfileImage from './dfr-ed.jpg';
 import malbsProfileImage from './dfr-malbs.jpg';
+import brettProfileImage from './dfr-brett.jpg';
+import nickmProfileImage from './dfr-nickm.jpg';
+import jayProfileImage from './dfr-jay.jpg';
 import { TeamProfile, TeamProfileProps } from './TeamProfile';
 
 const teamMembers: TeamProfileProps[] = [
@@ -25,13 +29,23 @@ const teamMembers: TeamProfileProps[] = [
     series: 'Formula Renault 3.5',
   },
   {
+    profileImage: russProfileImage,
+    name: 'Russ',
+    series: 'Formula Renault 3.5',
+  },
+  {
+    profileImage: edProfileImage,
+    name: 'Ed',
+    series: 'Formula Renault 3.5',
+  },
+  {
     profileImage: mickProfileImage,
     name: 'Mick',
     series: 'F3',
   },
   {
-    profileImage: edProfileImage,
-    name: 'Ed',
+    profileImage: tedProfileImage,
+    name: 'Ted',
     series: 'Formula Renault 3.5',
   },
   {
@@ -40,9 +54,19 @@ const teamMembers: TeamProfileProps[] = [
     series: 'F3',
   },
   {
-    profileImage: tedProfileImage,
-    name: 'Ted',
-    series: 'Formula Renault 3.5',
+    profileImage: jayProfileImage,
+    name: 'Jay',
+    series: 'F3',
+  },
+  {
+    profileImage: nickmProfileImage,
+    name: 'Nick',
+    series: 'F3',
+  },
+  {
+    profileImage: brettProfileImage,
+    name: 'Brett',
+    series: 'F3',
   },
 ];
 
