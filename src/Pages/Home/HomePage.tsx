@@ -10,8 +10,49 @@ export class HomePage extends React.Component {
     return (
       <>
         <Navbar />
-        <LiveStream />
-        <Videos />
+        <LiveStream
+          videos={[
+            {
+              id: {
+                videoId: '73p_bF3R_9w',
+              },
+            },
+          ]}
+        />
+        <Videos
+          videos={[
+            {
+              id: {
+                videoId: 'sA_OascSM0g',
+              },
+            },
+            {
+              id: {
+                videoId: 'x0vhgzBGMgM',
+              },
+            },
+            {
+              id: {
+                videoId: 'aZROwa9IxlE',
+              },
+            },
+            {
+              id: {
+                videoId: 'r2vRcBkp3UI',
+              },
+            },
+            {
+              id: {
+                videoId: 'n4uLVr336zI',
+              },
+            },
+            {
+              id: {
+                videoId: 'c3SA3Hd87Ng',
+              },
+            },
+          ]}
+        />
         <Team />
         <Footer />
       </>

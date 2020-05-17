@@ -1,40 +1,14 @@
 import React, { ReactElement } from 'react';
-import { youTubeDao, YoutubeResponseItem } from '../../../../YouTube/YouTubeDao';
+import { YoutubeResponseItem } from '../../../../YouTube/YouTubeDao';
 import YouTube from 'react-youtube';
 
-type VideosState = {
-  videos: YoutubeResponseItem[];
-};
-
-type VideosProps = {
+export type VideosProps = {
   videos?: YoutubeResponseItem[];
 };
 
-export class Videos extends React.Component<VideosProps, VideosState> {
-  public state: VideosState;
-
-  constructor(props: VideosProps, state: VideosState) {
-    super(props);
-    this.state = state;
-    if (props && props.videos && !state.videos) {
-      this.state.videos = props.videos;
-    }
-  }
-
-  public async componentDidMount(): Promise<void> {
-    try {
-      const videos = await youTubeDao.getRecentVideos();
-
-      if (videos && videos.length > 0) {
-        this.setState({ videos });
-      }
-    } catch (e) {
-      console.error(e);
-    }
-  }
-
+export class Videos extends React.Component<VideosProps> {
   public render(): ReactElement {
-    const { videos = [] } = this.state;
+    const { videos = [] } = this.props;
     const videoList = videos.map((video: YoutubeResponseItem) => {
       const {
         id: { videoId },
@@ -74,8 +48,18 @@ export class Videos extends React.Component<VideosProps, VideosState> {
           </div>
         </section>
       );
+    } else {
+      return (
+        <section className="section pt-4 bg-secondary" id="videos">
+          <div className="container">
+            <div className="row">
+              <div className="col-lg-8 offset-lg-2">
+                <h1 className="section-title text-center text-white">Videos</h1>
+              </div>
+            </div>
+          </div>
+        </section>
+      );
     }
-
-    return <></>;
   }
 }

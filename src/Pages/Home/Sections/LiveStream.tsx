@@ -1,11 +1,7 @@
 import React, { ReactElement } from 'react';
 import YouTube from 'react-youtube';
-import { youTubeDao, YoutubeResponseItem } from '../../../YouTube/YouTubeDao';
+import { YoutubeResponseItem } from '../../../YouTube/YouTubeDao';
 import dfrLogo from '../dfr-60.jpg';
-
-type LiveStreamState = {
-  videos: YoutubeResponseItem[];
-};
 
 type LiveStreamProps = {
   videos?: YoutubeResponseItem[];
@@ -18,34 +14,11 @@ const styles = {
   padding: '95px 0 40px 0',
 };
 
-export class LiveStream extends React.Component<{}, LiveStreamState> {
-  public state: LiveStreamState;
-
-  constructor(props: LiveStreamProps, state: LiveStreamState) {
-    super(props);
-    this.state = state;
-    if (props && props.videos && !state.videos) {
-      this.state.videos = props.videos;
-    }
-  }
-
-  public async componentDidMount(): Promise<void> {
-    try {
-      const videos = await youTubeDao.getLiveStream();
-
-      if (videos && videos.length > 0) {
-        this.setState({ videos });
-      }
-    } catch (e) {
-      console.error(e);
-    }
-  }
-
+export class LiveStream extends React.Component<LiveStreamProps> {
   public render(): ReactElement {
-    const { videos } = this.state;
+    const { videos } = this.props;
     if (videos && videos.length > 0) {
       const videoId = videos[0].id.videoId;
-      console.log(videos);
 
       return (
         <section id="home" style={styles}>
@@ -60,8 +33,8 @@ export class LiveStream extends React.Component<{}, LiveStreamState> {
                   controls: 2,
                   showinfo: 0,
                 },
-                width: '600px',
-                // height: '200px',
+                width: '650px',
+                height: '365px',
               }}
             />
           </div>
